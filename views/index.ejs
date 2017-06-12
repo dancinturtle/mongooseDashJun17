@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <script src="/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>We're at index of the mongoose dashboard!</h1>
+      <% for(idx of users){ %>
+        <p> <%= idx.name %> </p>
+        <p> <%= idx.location %> </p>
+        <p> <%= idx.age %> </p>
+        <a href="/mongooses/edit/<%=idx._id%>">Edit</a>
+        <form action="/mongoose/destroy/<%=idx._id%>" method="post">
+
+          <input type="submit" name="" value="delete">
+        </form>
+      <% } %>
+
+
+    
+    </div>
+  </body>
+</html>

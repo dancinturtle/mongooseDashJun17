@@ -1,0 +1,20 @@
+{
+  "name": "mongoDashboardJun17",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "dancinturtle <amy.giver@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
