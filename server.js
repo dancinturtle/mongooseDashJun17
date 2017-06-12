@@ -66,7 +66,7 @@ app.post('/mongooses', function(req, res){
 app.get('/mongooses/edit/:id', function(req, res){
   Marvin.findOne({_id: req.params.id})
   .then((data)=>{
-    res.render('edit',data)
+      res.render('edit',data)
   })
   .catch((err)=> {
     console.log("error found",err)
@@ -74,7 +74,7 @@ app.get('/mongooses/edit/:id', function(req, res){
 })
 
 app.post('/mongooses/:id', function(req, res){
-  Marvin.update({_id:req.params.id},req.body)
+  Marvin.update({_id:req.params.id},req.body, {runValidators: true})
   .then((data)=> {
     res.redirect('/');
   })
